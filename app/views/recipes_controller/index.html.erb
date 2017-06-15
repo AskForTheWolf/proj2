@@ -1,0 +1,10 @@
+<%= link_to "Create New Drink", new_recipe_path %>
+<section>
+  <% @recipes.each do |recipe| %>
+    <article>
+      <h2><%= link_to recipe.name, recipe_path(recipe) %></h2>
+      <time>Updated <%= recipe.updated_at %></time>
+      <p><%= recipe.body %></p>
+    </article>
+  <% end %>
+</section>
